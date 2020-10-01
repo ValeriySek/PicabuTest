@@ -16,7 +16,7 @@ import space.sekirin.pikabutest.R;
 public class BindingAdapters {
 
     @BindingAdapter("setImages")
-    public static void setImages(LinearLayout view, List<String> imageUrls){
+    public synchronized static void setImages(LinearLayout view, List<String> imageUrls){
         if(imageUrls == null || imageUrls.size() < 1){
             return;
         }

@@ -94,10 +94,10 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
             });
         }
 
-        void bind(PostContent content){
+        synchronized void bind(PostContent content){
             mBinding.setContent(content);
             Log.i("Problem", "ContentAdapter" + content);
-            mBinding.executePendingBindings();
+//            mBinding.executePendingBindings();
         }
 
         void bindFavouritePost(boolean isFavourite){
